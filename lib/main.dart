@@ -8,7 +8,7 @@ import 'package:weatherly/screens/landing_screen.dart';
 import 'package:weatherly/viewmodels/weather_view_model.dart';
 
 Future main() async {
-  await dotenv.load(fileName: 'assets/.env');
+  await dotenv.load(fileName: 'assets/env/dev.env');
   runApp(const WeatherlyApplication());
 }
 
