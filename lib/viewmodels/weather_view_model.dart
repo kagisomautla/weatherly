@@ -12,19 +12,20 @@ class WeatherViewModel extends ChangeNotifier {
 
   //fetch the current weather based on provided latitude and longitude
   Future<void> fetchWeather({required WeatherTypes types, required String latitude, required String longitude}) async {
-    final apiKey = dotenv.env['WEATHER_API_KEY'];
+    final apiKey = dotenv.env['WEATHERLY_API_KEY'];
     final apiHost = dotenv.env['CURRENT_WEATHER_URL'];
     final type = types == WeatherTypes.weather ? 'weather' : 'forecast';
-    final location = {'lat': latitude, 'lon': longitude};
-    final apiQueryParams = {'appid': apiKey, 'units': 'metric'};
+    String apiPath = 'data/2.5/$type';
+    final apiQueryParams = {'lat': latitude, 'lon': longitude, 'appid': apiKey, 'units': 'metric'};
 
-    final apiUrl = '$apiHost/data/2.5/$type?q=$location&$apiQueryParams';
-
-    final response = await http.get(Uri.parse(apiUrl));
+    final uri = Uri.https(apiHost!, apiPath, apiQueryParams);
+    final response = await http.get(uri);
 
     if (response.statusCode == 200) {
       final jsonData = jsonDecode(response.body);
       _weather = Weather.fromJson(jsonData);
+      print('Weather data loaded successfully');
+      print(_weather!.toJson());
       notifyListeners();
     } else {
       throw Exception('Failed to load weather data');
