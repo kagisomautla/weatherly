@@ -21,4 +21,13 @@ class Weather {
       temperature: Temperature.fromJson(json['main']),
     );
   }
+
+  Map<String, dynamic> toJson() {
+    return {
+      'cityName': cityName,
+      'description': description,
+      'icon': icon,
+      'temperature': temperature!.toJson(),
+    };
+  }
 }
