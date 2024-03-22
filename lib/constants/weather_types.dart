@@ -1,1 +1,1 @@
-enum WeatherTypes { weather, forecast }
+enum WeatherTypes { current, forecast }
