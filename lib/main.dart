@@ -1,10 +1,18 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:provider/provider.dart';
+import 'package:weatherly/screens/favourites_screen.dart';
+import 'package:weatherly/screens/google_maps_screen.dart';
 import 'package:weatherly/screens/home_screen.dart';
 import 'package:weatherly/screens/landing_screen.dart';
+import 'package:weatherly/screens/navigator_screen.dart';
+import 'package:weatherly/screens/onboarding_screen.dart';
+import 'package:weatherly/screens/search_screen.dart';
+import 'package:weatherly/viewmodels/coordinates_view_model.dart';
+import 'package:weatherly/viewmodels/google_maps_view_model.dart';
+import 'package:weatherly/viewmodels/locations_view_model.dart';
+import 'package:weatherly/viewmodels/theme_view_model.dart';
 import 'package:weatherly/viewmodels/weather_view_model.dart';
 
 Future main() async {
@@ -22,9 +30,16 @@ class WeatherlyApplication extends StatelessWidget {
       DeviceOrientation.portraitDown,
     ]);
 
+    // LocalStorageService.clearAllData();
+
+
     return MultiProvider(
       providers: [
         ChangeNotifierProvider<WeatherViewModel>(create: (_) => WeatherViewModel()),
+        ChangeNotifierProvider<CoordinatesViewModel>(create: (_) => CoordinatesViewModel()),
+        ChangeNotifierProvider<ThemeViewModel>(create: (_) => ThemeViewModel()),
+        ChangeNotifierProvider<LocationViewModel>(create: (_) => LocationViewModel()),
+        ChangeNotifierProvider<GoogleMapsViewModel>(create: (_) => GoogleMapsViewModel()),
       ],
       child: MaterialApp(
         title: 'Flutter Demo',
@@ -33,7 +48,12 @@ class WeatherlyApplication extends StatelessWidget {
         ),
         routes: <String, WidgetBuilder>{
           '/': (BuildContext context) => LandingScreen(),
+          '/onboarding': (BuildContext context) => OnboardingScreen(),
+          '/navigator': (BuildContext context) => NavigatorScreen(),
           '/home': (BuildContext context) => HomeScreen(),
+          '/maps': (BuildContext context) => GoogleMapsScreen(),
+          '/search': (BuildContext context) => SearchScreen(),
+          '/favourites': (BuildContext context) => FavouritesScreen(),
         },
       ),
     );
