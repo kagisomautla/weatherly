@@ -5,7 +5,7 @@ import 'package:provider/provider.dart';
 import 'package:weatherly/screens/favourites_screen.dart';
 import 'package:weatherly/screens/home_screen.dart';
 import 'package:weatherly/screens/landing_screen.dart';
-import 'package:weatherly/screens/maps.dart';
+import 'package:weatherly/screens/google_map.dart';
 import 'package:weatherly/screens/navigator_screen.dart';
 import 'package:weatherly/screens/onboarding_screen.dart';
 import 'package:weatherly/screens/search_screen.dart';
