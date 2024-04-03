@@ -1,18 +1,23 @@
-class Coordinates {
-  String? longitude;
-  String? latitude;
+class CoordinatesModel {
+  double longitude;
+  double latitude;
 
-  Coordinates({this.latitude, this.longitude});
-
-  Coordinates.fromJson(Map<String, dynamic> json) {
-    longitude = json['longitude'];
-    latitude = json['latitude'];
-  }
+  CoordinatesModel({
+    required this.longitude,
+    required this.latitude,
+  });
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = <String, dynamic>{};
-    data['longitude'] = longitude;
-    data['latitude'] = latitude;
-    return data;
+    return {
+      'longitude': longitude,
+      'latitude': latitude,
+    };
+  }
+
+  factory CoordinatesModel.fromJson(Map<String, dynamic> json) {
+    return CoordinatesModel(
+      longitude: json['longitude'],
+      latitude: json['latitude'],
+    );
   }
 }
