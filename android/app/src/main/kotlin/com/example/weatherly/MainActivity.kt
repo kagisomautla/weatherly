@@ -1,4 +1,4 @@
-package com.example.weatherly
+package mobile.weatherly
 
 import io.flutter.embedding.android.FlutterActivity
 
