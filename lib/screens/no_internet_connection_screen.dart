@@ -9,29 +9,31 @@ class NoInternetConnectionScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     assert(showRetryButton! ? onRetry != null : true);
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        //load lottie animation json
-        Center(child: Image.asset('assets/images/no_internet.gif')),
-        SizedBox(height: 20),
-        TextWidget(
-          text: 'You are not connected to the internet',
-          isBold: true,
-        ),
-        SizedBox(height: 20),
-        showRetryButton == true
-            ? ElevatedButton(
-                onPressed: () {
-                  onRetry!();
-                },
-                child: TextWidget(
-                  text: 'Retry',
-                  isBold: true,
-                ),
-              )
-            : Container(),
-      ],
+    return Scaffold(
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          //load lottie animation json
+          Center(child: Image.asset('assets/images/no_internet.gif')),
+          SizedBox(height: 20),
+          TextWidget(
+            text: 'You are not connected to the internet',
+            isBold: true,
+          ),
+          SizedBox(height: 20),
+          showRetryButton == true
+              ? ElevatedButton(
+                  onPressed: () {
+                    onRetry!();
+                  },
+                  child: TextWidget(
+                    text: 'Retry',
+                    isBold: true,
+                  ),
+                )
+              : Container(),
+        ],
+      ),
     );
   }
 }
