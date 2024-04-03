@@ -37,12 +37,23 @@ dependencies:
   cupertino_icons: ^1.0.6
   provider: ^6.1.2
   flutter_dotenv: ^5.1.0
-  google_fonts: ^4.0.4
+  google_fonts: ^6.2.1
   intl: ^0.19.0
   shared_preferences: ^2.0.15
   focus_detector: ^2.0.1
   http: ^1.2.1
   mockito: ^5.4.4
+  flutter_secure_storage: ^9.0.0
+  font_awesome_flutter: ^10.7.0
+  geolocator: ^11.0.0
+  google_maps_flutter: ^2.6.0
+  google_places_flutter: ^2.0.8
+  lottie: ^3.1.0
+  cached_network_image: ^3.3.1
+  connectivity_plus: ^6.0.1
+  dartz: ^0.10.1
+  percent_indicator: ^4.2.3
+  # internet_connection_checker_plus: ^2.3.0
 
 dev_dependencies:
   flutter_test:
@@ -55,6 +66,8 @@ dev_dependencies:
   # rules and activating additional ones.
   flutter_lints: ^3.0.0
   test: ^1.24.9
+  mocktail: ^1.0.3
+  build_runner: ^2.4.9
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec

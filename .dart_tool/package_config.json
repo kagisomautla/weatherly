@@ -14,6 +14,12 @@
       "languageVersion": "3.0"
     },
     {
+      "name": "archive",
+      "rootUri": "file:///Users/kagisomautla/.pub-cache/hosted/pub.dev/archive-3.4.10",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "args",
       "rootUri": "file:///Users/kagisomautla/.pub-cache/hosted/pub.dev/args-2.4.2",
       "packageUri": "lib/",
@@ -38,6 +44,36 @@
       "languageVersion": "2.19"
     },
     {
+      "name": "build_config",
+      "rootUri": "file:///Users/kagisomautla/.pub-cache/hosted/pub.dev/build_config-1.1.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.14"
+    },
+    {
+      "name": "build_daemon",
+      "rootUri": "file:///Users/kagisomautla/.pub-cache/hosted/pub.dev/build_daemon-4.0.1",
+      "packageUri": "lib/",
+      "languageVersion": "3.0"
+    },
+    {
+      "name": "build_resolvers",
+      "rootUri": "file:///Users/kagisomautla/.pub-cache/hosted/pub.dev/build_resolvers-2.4.2",
+      "packageUri": "lib/",
+      "languageVersion": "3.0"
+    },
+    {
+      "name": "build_runner",
+      "rootUri": "file:///Users/kagisomautla/.pub-cache/hosted/pub.dev/build_runner-2.4.9",
+      "packageUri": "lib/",
+      "languageVersion": "3.0"
+    },
+    {
+      "name": "build_runner_core",
+      "rootUri": "file:///Users/kagisomautla/.pub-cache/hosted/pub.dev/build_runner_core-7.3.0",
+      "packageUri": "lib/",
+      "languageVersion": "3.0"
+    },
+    {
       "name": "built_collection",
       "rootUri": "file:///Users/kagisomautla/.pub-cache/hosted/pub.dev/built_collection-5.1.1",
       "packageUri": "lib/",
@@ -50,10 +86,34 @@
       "languageVersion": "3.0"
     },
     {
+      "name": "cached_network_image",
+      "rootUri": "file:///Users/kagisomautla/.pub-cache/hosted/pub.dev/cached_network_image-3.3.1",
+      "packageUri": "lib/",
+      "languageVersion": "3.0"
+    },
+    {
+      "name": "cached_network_image_platform_interface",
+      "rootUri": "file:///Users/kagisomautla/.pub-cache/hosted/pub.dev/cached_network_image_platform_interface-4.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "3.0"
+    },
+    {
+      "name": "cached_network_image_web",
+      "rootUri": "file:///Users/kagisomautla/.pub-cache/hosted/pub.dev/cached_network_image_web-1.1.1",
+      "packageUri": "lib/",
+      "languageVersion": "3.0"
+    },
+    {
       "name": "characters",
       "rootUri": "file:///Users/kagisomautla/.pub-cache/hosted/pub.dev/characters-1.3.0",
       "packageUri": "lib/",
       "languageVersion": "2.12"
+    },
+    {
+      "name": "checked_yaml",
+      "rootUri": "file:///Users/kagisomautla/.pub-cache/hosted/pub.dev/checked_yaml-2.0.3",
+      "packageUri": "lib/",
+      "languageVersion": "2.19"
     },
     {
       "name": "clock",
@@ -70,6 +130,18 @@
     {
       "name": "collection",
       "rootUri": "file:///Users/kagisomautla/.pub-cache/hosted/pub.dev/collection-1.18.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.18"
+    },
+    {
+      "name": "connectivity_plus",
+      "rootUri": "file:///Users/kagisomautla/.pub-cache/hosted/pub.dev/connectivity_plus-6.0.1",
+      "packageUri": "lib/",
+      "languageVersion": "3.2"
+    },
+    {
+      "name": "connectivity_plus_platform_interface",
+      "rootUri": "file:///Users/kagisomautla/.pub-cache/hosted/pub.dev/connectivity_plus_platform_interface-2.0.0",
       "packageUri": "lib/",
       "languageVersion": "2.18"
     },
@@ -92,6 +164,12 @@
       "languageVersion": "2.19"
     },
     {
+      "name": "csslib",
+      "rootUri": "file:///Users/kagisomautla/.pub-cache/hosted/pub.dev/csslib-1.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.19"
+    },
+    {
       "name": "cupertino_icons",
       "rootUri": "file:///Users/kagisomautla/.pub-cache/hosted/pub.dev/cupertino_icons-1.0.6",
       "packageUri": "lib/",
@@ -102,6 +180,24 @@
       "rootUri": "file:///Users/kagisomautla/.pub-cache/hosted/pub.dev/dart_style-2.3.6",
       "packageUri": "lib/",
       "languageVersion": "3.0"
+    },
+    {
+      "name": "dartz",
+      "rootUri": "file:///Users/kagisomautla/.pub-cache/hosted/pub.dev/dartz-0.10.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "dbus",
+      "rootUri": "file:///Users/kagisomautla/.pub-cache/hosted/pub.dev/dbus-0.7.10",
+      "packageUri": "lib/",
+      "languageVersion": "2.17"
+    },
+    {
+      "name": "dio",
+      "rootUri": "file:///Users/kagisomautla/.pub-cache/hosted/pub.dev/dio-5.4.2+1",
+      "packageUri": "lib/",
+      "languageVersion": "2.15"
     },
     {
       "name": "fake_async",
@@ -134,6 +230,12 @@
       "languageVersion": "3.2"
     },
     {
+      "name": "flutter_cache_manager",
+      "rootUri": "file:///Users/kagisomautla/.pub-cache/hosted/pub.dev/flutter_cache_manager-3.3.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.17"
+    },
+    {
       "name": "flutter_dotenv",
       "rootUri": "file:///Users/kagisomautla/.pub-cache/hosted/pub.dev/flutter_dotenv-5.1.0",
       "packageUri": "lib/",
@@ -141,9 +243,51 @@
     },
     {
       "name": "flutter_lints",
-      "rootUri": "file:///Users/kagisomautla/.pub-cache/hosted/pub.dev/flutter_lints-3.0.1",
+      "rootUri": "file:///Users/kagisomautla/.pub-cache/hosted/pub.dev/flutter_lints-3.0.2",
       "packageUri": "lib/",
-      "languageVersion": "3.0"
+      "languageVersion": "3.1"
+    },
+    {
+      "name": "flutter_plugin_android_lifecycle",
+      "rootUri": "file:///Users/kagisomautla/.pub-cache/hosted/pub.dev/flutter_plugin_android_lifecycle-2.0.17",
+      "packageUri": "lib/",
+      "languageVersion": "2.19"
+    },
+    {
+      "name": "flutter_secure_storage",
+      "rootUri": "file:///Users/kagisomautla/.pub-cache/hosted/pub.dev/flutter_secure_storage-9.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "flutter_secure_storage_linux",
+      "rootUri": "file:///Users/kagisomautla/.pub-cache/hosted/pub.dev/flutter_secure_storage_linux-1.2.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "flutter_secure_storage_macos",
+      "rootUri": "file:///Users/kagisomautla/.pub-cache/hosted/pub.dev/flutter_secure_storage_macos-3.0.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "flutter_secure_storage_platform_interface",
+      "rootUri": "file:///Users/kagisomautla/.pub-cache/hosted/pub.dev/flutter_secure_storage_platform_interface-1.0.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "flutter_secure_storage_web",
+      "rootUri": "file:///Users/kagisomautla/.pub-cache/hosted/pub.dev/flutter_secure_storage_web-1.1.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "flutter_secure_storage_windows",
+      "rootUri": "file:///Users/kagisomautla/.pub-cache/hosted/pub.dev/flutter_secure_storage_windows-3.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
     },
     {
       "name": "flutter_test",
@@ -164,10 +308,52 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "font_awesome_flutter",
+      "rootUri": "file:///Users/kagisomautla/.pub-cache/hosted/pub.dev/font_awesome_flutter-10.7.0",
+      "packageUri": "lib/",
+      "languageVersion": "3.0"
+    },
+    {
       "name": "frontend_server_client",
       "rootUri": "file:///Users/kagisomautla/.pub-cache/hosted/pub.dev/frontend_server_client-3.2.0",
       "packageUri": "lib/",
       "languageVersion": "2.12"
+    },
+    {
+      "name": "geolocator",
+      "rootUri": "file:///Users/kagisomautla/.pub-cache/hosted/pub.dev/geolocator-11.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.15"
+    },
+    {
+      "name": "geolocator_android",
+      "rootUri": "file:///Users/kagisomautla/.pub-cache/hosted/pub.dev/geolocator_android-4.5.4",
+      "packageUri": "lib/",
+      "languageVersion": "2.15"
+    },
+    {
+      "name": "geolocator_apple",
+      "rootUri": "file:///Users/kagisomautla/.pub-cache/hosted/pub.dev/geolocator_apple-2.3.7",
+      "packageUri": "lib/",
+      "languageVersion": "2.15"
+    },
+    {
+      "name": "geolocator_platform_interface",
+      "rootUri": "file:///Users/kagisomautla/.pub-cache/hosted/pub.dev/geolocator_platform_interface-4.2.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.15"
+    },
+    {
+      "name": "geolocator_web",
+      "rootUri": "file:///Users/kagisomautla/.pub-cache/hosted/pub.dev/geolocator_web-3.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.15"
+    },
+    {
+      "name": "geolocator_windows",
+      "rootUri": "file:///Users/kagisomautla/.pub-cache/hosted/pub.dev/geolocator_windows-0.2.3",
+      "packageUri": "lib/",
+      "languageVersion": "2.15"
     },
     {
       "name": "glob",
@@ -177,9 +363,63 @@
     },
     {
       "name": "google_fonts",
-      "rootUri": "file:///Users/kagisomautla/.pub-cache/hosted/pub.dev/google_fonts-4.0.5",
+      "rootUri": "file:///Users/kagisomautla/.pub-cache/hosted/pub.dev/google_fonts-6.2.1",
       "packageUri": "lib/",
       "languageVersion": "2.14"
+    },
+    {
+      "name": "google_maps",
+      "rootUri": "file:///Users/kagisomautla/.pub-cache/hosted/pub.dev/google_maps-7.1.0",
+      "packageUri": "lib/",
+      "languageVersion": "3.3"
+    },
+    {
+      "name": "google_maps_flutter",
+      "rootUri": "file:///Users/kagisomautla/.pub-cache/hosted/pub.dev/google_maps_flutter-2.6.0",
+      "packageUri": "lib/",
+      "languageVersion": "3.3"
+    },
+    {
+      "name": "google_maps_flutter_android",
+      "rootUri": "file:///Users/kagisomautla/.pub-cache/hosted/pub.dev/google_maps_flutter_android-2.7.0",
+      "packageUri": "lib/",
+      "languageVersion": "3.1"
+    },
+    {
+      "name": "google_maps_flutter_ios",
+      "rootUri": "file:///Users/kagisomautla/.pub-cache/hosted/pub.dev/google_maps_flutter_ios-2.5.2",
+      "packageUri": "lib/",
+      "languageVersion": "3.2"
+    },
+    {
+      "name": "google_maps_flutter_platform_interface",
+      "rootUri": "file:///Users/kagisomautla/.pub-cache/hosted/pub.dev/google_maps_flutter_platform_interface-2.6.0",
+      "packageUri": "lib/",
+      "languageVersion": "3.1"
+    },
+    {
+      "name": "google_maps_flutter_web",
+      "rootUri": "file:///Users/kagisomautla/.pub-cache/hosted/pub.dev/google_maps_flutter_web-0.5.6+2",
+      "packageUri": "lib/",
+      "languageVersion": "3.3"
+    },
+    {
+      "name": "google_places_flutter",
+      "rootUri": "file:///Users/kagisomautla/.pub-cache/hosted/pub.dev/google_places_flutter-2.0.8",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "graphs",
+      "rootUri": "file:///Users/kagisomautla/.pub-cache/hosted/pub.dev/graphs-2.3.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.18"
+    },
+    {
+      "name": "html",
+      "rootUri": "file:///Users/kagisomautla/.pub-cache/hosted/pub.dev/html-0.15.4",
+      "packageUri": "lib/",
+      "languageVersion": "2.19"
     },
     {
       "name": "http",
@@ -218,6 +458,18 @@
       "languageVersion": "2.19"
     },
     {
+      "name": "js_wrapping",
+      "rootUri": "file:///Users/kagisomautla/.pub-cache/hosted/pub.dev/js_wrapping-0.7.4",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "json_annotation",
+      "rootUri": "file:///Users/kagisomautla/.pub-cache/hosted/pub.dev/json_annotation-4.8.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.19"
+    },
+    {
       "name": "leak_tracker",
       "rootUri": "file:///Users/kagisomautla/.pub-cache/hosted/pub.dev/leak_tracker-10.0.0",
       "packageUri": "lib/",
@@ -246,6 +498,12 @@
       "rootUri": "file:///Users/kagisomautla/.pub-cache/hosted/pub.dev/logging-1.2.0",
       "packageUri": "lib/",
       "languageVersion": "2.19"
+    },
+    {
+      "name": "lottie",
+      "rootUri": "file:///Users/kagisomautla/.pub-cache/hosted/pub.dev/lottie-3.1.0",
+      "packageUri": "lib/",
+      "languageVersion": "3.2"
     },
     {
       "name": "matcher",
@@ -278,14 +536,32 @@
       "languageVersion": "3.1"
     },
     {
+      "name": "mocktail",
+      "rootUri": "file:///Users/kagisomautla/.pub-cache/hosted/pub.dev/mocktail-1.0.3",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "nested",
       "rootUri": "file:///Users/kagisomautla/.pub-cache/hosted/pub.dev/nested-1.0.0",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
     {
+      "name": "nm",
+      "rootUri": "file:///Users/kagisomautla/.pub-cache/hosted/pub.dev/nm-0.5.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "node_preamble",
       "rootUri": "file:///Users/kagisomautla/.pub-cache/hosted/pub.dev/node_preamble-2.0.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "octo_image",
+      "rootUri": "file:///Users/kagisomautla/.pub-cache/hosted/pub.dev/octo_image-2.0.0",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -338,6 +614,18 @@
       "languageVersion": "2.19"
     },
     {
+      "name": "percent_indicator",
+      "rootUri": "file:///Users/kagisomautla/.pub-cache/hosted/pub.dev/percent_indicator-4.2.3",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "petitparser",
+      "rootUri": "file:///Users/kagisomautla/.pub-cache/hosted/pub.dev/petitparser-6.0.2",
+      "packageUri": "lib/",
+      "languageVersion": "3.2"
+    },
+    {
       "name": "platform",
       "rootUri": "file:///Users/kagisomautla/.pub-cache/hosted/pub.dev/platform-3.1.4",
       "packageUri": "lib/",
@@ -346,6 +634,12 @@
     {
       "name": "plugin_platform_interface",
       "rootUri": "file:///Users/kagisomautla/.pub-cache/hosted/pub.dev/plugin_platform_interface-2.1.8",
+      "packageUri": "lib/",
+      "languageVersion": "3.0"
+    },
+    {
+      "name": "pointycastle",
+      "rootUri": "file:///Users/kagisomautla/.pub-cache/hosted/pub.dev/pointycastle-3.7.4",
       "packageUri": "lib/",
       "languageVersion": "3.0"
     },
@@ -366,6 +660,24 @@
       "rootUri": "file:///Users/kagisomautla/.pub-cache/hosted/pub.dev/pub_semver-2.1.4",
       "packageUri": "lib/",
       "languageVersion": "2.17"
+    },
+    {
+      "name": "pubspec_parse",
+      "rootUri": "file:///Users/kagisomautla/.pub-cache/hosted/pub.dev/pubspec_parse-1.2.3",
+      "packageUri": "lib/",
+      "languageVersion": "2.18"
+    },
+    {
+      "name": "rxdart",
+      "rootUri": "file:///Users/kagisomautla/.pub-cache/hosted/pub.dev/rxdart-0.27.7",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "sanitize_html",
+      "rootUri": "file:///Users/kagisomautla/.pub-cache/hosted/pub.dev/sanitize_html-2.1.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
     },
     {
       "name": "shared_preferences",
@@ -464,6 +776,24 @@
       "languageVersion": "2.18"
     },
     {
+      "name": "sprintf",
+      "rootUri": "file:///Users/kagisomautla/.pub-cache/hosted/pub.dev/sprintf-7.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "sqflite",
+      "rootUri": "file:///Users/kagisomautla/.pub-cache/hosted/pub.dev/sqflite-2.3.2",
+      "packageUri": "lib/",
+      "languageVersion": "3.0"
+    },
+    {
+      "name": "sqflite_common",
+      "rootUri": "file:///Users/kagisomautla/.pub-cache/hosted/pub.dev/sqflite_common-2.5.4",
+      "packageUri": "lib/",
+      "languageVersion": "3.3"
+    },
+    {
       "name": "stack_trace",
       "rootUri": "file:///Users/kagisomautla/.pub-cache/hosted/pub.dev/stack_trace-1.11.1",
       "packageUri": "lib/",
@@ -476,10 +806,22 @@
       "languageVersion": "2.19"
     },
     {
+      "name": "stream_transform",
+      "rootUri": "file:///Users/kagisomautla/.pub-cache/hosted/pub.dev/stream_transform-2.1.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.14"
+    },
+    {
       "name": "string_scanner",
       "rootUri": "file:///Users/kagisomautla/.pub-cache/hosted/pub.dev/string_scanner-1.2.0",
       "packageUri": "lib/",
       "languageVersion": "2.18"
+    },
+    {
+      "name": "synchronized",
+      "rootUri": "file:///Users/kagisomautla/.pub-cache/hosted/pub.dev/synchronized-3.1.0+1",
+      "packageUri": "lib/",
+      "languageVersion": "3.0"
     },
     {
       "name": "term_glyph",
@@ -506,10 +848,22 @@
       "languageVersion": "3.0"
     },
     {
+      "name": "timing",
+      "rootUri": "file:///Users/kagisomautla/.pub-cache/hosted/pub.dev/timing-1.0.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.14"
+    },
+    {
       "name": "typed_data",
       "rootUri": "file:///Users/kagisomautla/.pub-cache/hosted/pub.dev/typed_data-1.3.2",
       "packageUri": "lib/",
       "languageVersion": "2.17"
+    },
+    {
+      "name": "uuid",
+      "rootUri": "file:///Users/kagisomautla/.pub-cache/hosted/pub.dev/uuid-4.3.3",
+      "packageUri": "lib/",
+      "languageVersion": "3.0"
     },
     {
       "name": "vector_math",
@@ -555,7 +909,7 @@
     },
     {
       "name": "win32",
-      "rootUri": "file:///Users/kagisomautla/.pub-cache/hosted/pub.dev/win32-5.3.0",
+      "rootUri": "file:///Users/kagisomautla/.pub-cache/hosted/pub.dev/win32-5.4.0",
       "packageUri": "lib/",
       "languageVersion": "3.3"
     },
@@ -564,6 +918,12 @@
       "rootUri": "file:///Users/kagisomautla/.pub-cache/hosted/pub.dev/xdg_directories-1.0.4",
       "packageUri": "lib/",
       "languageVersion": "3.0"
+    },
+    {
+      "name": "xml",
+      "rootUri": "file:///Users/kagisomautla/.pub-cache/hosted/pub.dev/xml-6.5.0",
+      "packageUri": "lib/",
+      "languageVersion": "3.2"
     },
     {
       "name": "yaml",
@@ -578,7 +938,7 @@
       "languageVersion": "3.3"
     }
   ],
-  "generated": "2024-03-22T20:06:34.964412Z",
+  "generated": "2024-04-03T10:44:51.528451Z",
   "generator": "pub",
   "generatorVersion": "3.3.1"
 }
