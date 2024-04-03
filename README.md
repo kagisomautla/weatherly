@@ -48,7 +48,7 @@ flutter test
 This command will execute all unit tests located in the test directory of the project.
 
 ## Running the Application
-# On Physical Devices
+### On Physical Devices
 To install and run the application on physical devices, follow these steps:
 
 - Ensure that you have a compatible Flutter development environment set up.
@@ -60,7 +60,7 @@ To install and run the application on physical devices, follow these steps:
 flutter run
 ```
 
-# On Emulators/Simulators
+### On Emulators/Simulators
 To run the application on emulators or simulators, follow these steps:
 
 - Launch your preferred emulator or simulator from your development environment.
