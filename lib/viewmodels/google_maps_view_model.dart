@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
+import 'package:google_places_flutter/model/prediction.dart';
 import 'package:provider/provider.dart';
 import 'package:weatherly/models/Location.dart';
 import 'package:weatherly/services/local_storage_service.dart';
 import 'package:weatherly/viewmodels/coordinates_view_model.dart';
+import 'package:weatherly/viewmodels/weather_view_model.dart';
+import 'package:weatherly/widgets/pop_up.dart';
 
 class GoogleMapsViewModel extends ChangeNotifier {
   int indexOfLocation = 1;
@@ -167,6 +170,28 @@ class GoogleMapsViewModel extends ChangeNotifier {
           zoom: 17,
         ),
       ),
+    );
+
+    notifyListeners();
+  }
+
+  Future onLongPress(LatLng args, BuildContext context) async {
+    //show dialog to add location to favourites
+    popupControl(
+      context: context,
+      message: 'Do you want to load the weather information for this location?',
+      title: 'Load Weather?',
+      onConfirm: () async {
+        final weatherViewModel = Provider.of<WeatherViewModel>(context, listen: false);
+
+        await weatherViewModel.onSearch(
+          searchItem: Prediction(
+            lat: args.latitude.toString(),
+            lng: args.longitude.toString(),
+          ),
+          context: context,
+        );
+      },
     );
 
     notifyListeners();
