@@ -5,7 +5,7 @@ import 'package:weatherly/constants/colors.dart';
 import 'package:weatherly/models/Navigator.dart';
 import 'package:weatherly/screens/favourites_screen.dart';
 import 'package:weatherly/screens/home_screen.dart';
-import 'package:weatherly/screens/maps.dart';
+import 'package:weatherly/screens/google_map.dart';
 import 'package:weatherly/services/internet_service.dart';
 import 'package:weatherly/viewmodels/theme_view_model.dart';
 import 'package:weatherly/viewmodels/weather_view_model.dart';
