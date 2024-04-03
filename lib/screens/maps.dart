@@ -8,6 +8,8 @@ import 'package:weatherly/widgets/loader.dart';
 import 'package:weatherly/widgets/text.dart';
 
 class GoogleMapScreen extends StatefulWidget {
+  final GlobalKey<NavigatorState> navigatorKey;
+  GoogleMapScreen({Key? key, required this.navigatorKey}) : super(key: key);
   @override
   _GoogleMapScreenState createState() => _GoogleMapScreenState();
 }
@@ -23,11 +25,14 @@ class _GoogleMapScreenState extends State<GoogleMapScreen> {
     super.initState();
   }
 
+  disposeMapController() {
+    final GoogleMapsViewModel mapsViewModel = Provider.of<GoogleMapsViewModel>(widget.navigatorKey.currentContext!, listen: false);
+    mapsViewModel.dispose();
+  }
+
   @override
   void dispose() {
-    // mapController.dispose();
-    final GoogleMapsViewModel mapsViewModel = Provider.of<GoogleMapsViewModel>(context, listen: false);
-    mapsViewModel.dispose();
+    disposeMapController();
     super.dispose();
   }
 
@@ -46,22 +51,23 @@ class _GoogleMapScreenState extends State<GoogleMapScreen> {
     final GoogleMapsViewModel googleMapsViewModel = Provider.of<GoogleMapsViewModel>(context);
     return Scaffold(
       appBar: AppBar(
-        iconTheme: IconThemeData(
-          color: Colors.black,
-        ),
-        backgroundColor: Colors.white,
+        backgroundColor: themeViewModel.color,
+        shadowColor: Colors.black,
+        elevation: 2,
         title: Row(
           children: [
             FaIcon(
               FontAwesomeIcons.mapLocation,
-              color: themeViewModel.color,
+              color: Colors.white,
             ),
             SizedBox(
               width: 10,
             ),
             TextWidget(
               text: 'Google Map',
-              color: Colors.black,
+              color: Colors.white,
+              isBold: true,
+              size: TextSize.md,
             ),
           ],
         ),

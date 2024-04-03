@@ -123,6 +123,7 @@ class GoogleMapsViewModel extends ChangeNotifier {
       print('MARKER: ${marker.toJson()}');
     }
 
+    if (!context.mounted) return;
     notifyListeners();
   }
 

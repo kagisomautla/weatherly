@@ -3,9 +3,9 @@ import 'package:flutter/services.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:provider/provider.dart';
 import 'package:weatherly/screens/favourites_screen.dart';
-import 'package:weatherly/screens/google_maps_screen.dart';
 import 'package:weatherly/screens/home_screen.dart';
 import 'package:weatherly/screens/landing_screen.dart';
+import 'package:weatherly/screens/maps.dart';
 import 'package:weatherly/screens/navigator_screen.dart';
 import 'package:weatherly/screens/onboarding_screen.dart';
 import 'package:weatherly/screens/search_screen.dart';
@@ -32,6 +32,8 @@ class WeatherlyApplication extends StatelessWidget {
 
     // LocalStorageService.clearAllData();
 
+    GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
+
 
     return MultiProvider(
       providers: [
@@ -42,6 +44,7 @@ class WeatherlyApplication extends StatelessWidget {
         ChangeNotifierProvider<GoogleMapsViewModel>(create: (_) => GoogleMapsViewModel()),
       ],
       child: MaterialApp(
+        key: navigatorKey,
         title: 'Flutter Demo',
         theme: ThemeData(
           primarySwatch: Colors.orange,
@@ -49,9 +52,9 @@ class WeatherlyApplication extends StatelessWidget {
         routes: <String, WidgetBuilder>{
           '/': (BuildContext context) => LandingScreen(),
           '/onboarding': (BuildContext context) => OnboardingScreen(),
-          '/navigator': (BuildContext context) => NavigatorScreen(),
+          '/navigator': (BuildContext context) => NavigatorScreen(navigatorKey: navigatorKey),
           '/home': (BuildContext context) => HomeScreen(),
-          '/maps': (BuildContext context) => GoogleMapsScreen(),
+          '/maps': (BuildContext context) => GoogleMapScreen(navigatorKey: navigatorKey),
           '/search': (BuildContext context) => SearchScreen(),
           '/favourites': (BuildContext context) => FavouritesScreen(),
         },
