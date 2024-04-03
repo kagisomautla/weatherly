@@ -63,9 +63,10 @@ class _HomeScreenState extends State<HomeScreen> {
           backgroundColor: Colors.transparent,
           elevation: 0,
           leadingWidth: 100,
-          leading: sync(context),
+          leading: weatherViewModel.isOnline ? sync(context) : Container(),
           actions: [
-            Row(
+            weatherViewModel.isOnline
+                ? Row(
               children: [
                 IconButton(
                   icon: Icon(FontAwesomeIcons.magnifyingGlass, color: Colors.white),
@@ -80,7 +81,8 @@ class _HomeScreenState extends State<HomeScreen> {
                   location: locationViewModel.location!,
                 )
               ],
-            )
+                  )
+                : Container()
           ],
         ),
         body: SingleChildScrollView(
@@ -169,20 +171,11 @@ class _HomeScreenState extends State<HomeScreen> {
                       : Container(),
                   Positioned(
                     bottom: MediaQuery.of(context).padding.top * 3,
-                    child: Column(
-                      children: [
-                        Icon(
-                          FontAwesomeIcons.mapPin,
-                          color: const Color.fromARGB(255, 255, 17, 0),
-                          size: 14,
-                        ),
-                        TextWidget(
-                          text: weatherViewModel.weather?.cityName ?? '',
-                          color: Colors.white,
-                          size: TextSize.md,
-                          isBold: true,
-                        ),
-                      ],
+                    child: TextWidget(
+                      text: weatherViewModel.weather?.cityName ?? '',
+                      color: Colors.white,
+                      size: TextSize.md,
+                      isBold: true,
                     ),
                   ),
                   Positioned(
