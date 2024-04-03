@@ -2,9 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:provider/provider.dart';
-import 'package:weatherly/models/Location.dart';
-import 'package:weatherly/services/local_storage_service.dart';
-import 'package:weatherly/viewmodels/coordinates_view_model.dart';
 import 'package:weatherly/viewmodels/google_maps_view_model.dart';
 import 'package:weatherly/viewmodels/theme_view_model.dart';
 import 'package:weatherly/widgets/loader.dart';
@@ -16,130 +13,13 @@ class GoogleMapScreen extends StatefulWidget {
 }
 
 class _GoogleMapScreenState extends State<GoogleMapScreen> {
-  // late GoogleMapController mapController;
-  LatLng? _center;
   bool loading = true;
-  Set<Marker> _favoritedLocationsMarkers = Set<Marker>();
-  bool isGoTo = false;
-  LocationModel? location;
-  int numberOfFaveLocations = 0;
-  int indexOfLocation = 1;
-  List<LocationModel> locations = [];
-  LocationModel? selectedLocation;
-
-  init() async {
-    await LocalStorageService.getFavouriteLocationsData().then((e) {
-      setState(() {
-        locations = e;
-        numberOfFaveLocations = e.length;
-
-        //print locations
-        for (var location in locations) {
-          print('LOCATION: ${location.toJson()}');
-        }
-      });
-    });
-
-    await LocalStorageService.getLocationData().then((e) {
-      setState(() {
-        selectedLocation = e;
-      });
-    });
-
-    //get user current location
-    final CoordinatesViewModel coordinatesViewModel = Provider.of<CoordinatesViewModel>(context, listen: false);
-    if (!mounted) return;
-    await coordinatesViewModel.fetchCurrentPosition(context);
-
-    setState(() {
-      if (numberOfFaveLocations > 0) {
-        for (var location in locations) {
-          print('Adding markers... ${location.coordinates.latitude}, ${location.coordinates.longitude}');
-
-          int index = locations.indexOf(location);
-
-          _favoritedLocationsMarkers.add(
-            Marker(
-              markerId: MarkerId(index.toString()),
-              position: LatLng(location.coordinates.latitude, location.coordinates.longitude),
-              infoWindow: InfoWindow(
-                title: location.name,
-              ),
-            ),
-          );
-        }
-      }
-      _favoritedLocationsMarkers.add(
-        Marker(
-          markerId: MarkerId(
-            'currentLocation',
-          ),
-          position: LatLng(selectedLocation!.coordinates.latitude, selectedLocation!.coordinates.longitude),
-          infoWindow: InfoWindow(
-            title: 'You are here.',
-          ),
-        ),
-      );
-      _center = LatLng(selectedLocation!.coordinates.latitude, selectedLocation!.coordinates.longitude);
-      loading = false;
-    });
-
-    print('_favoritedLocationsMarkers: ${_favoritedLocationsMarkers.length}');
-
-    //print _favoritedLocationsMarkers
-    for (var marker in _favoritedLocationsMarkers) {
-      print('MARKER: ${marker.toJson()}');
-    }
-  }
-
-  //create a method to animate the map to the next location and back
-  //this method will be called when the user taps the back and forward buttons
-
-  // void handleGoToNextAndBack() {
-  //   if (indexOfLocation < numberOfFaveLocations) {
-  //     setState(() {
-  //       indexOfLocation++;
-  //       selectedLocation = locations[indexOfLocation];
-  //       mapController.animateCamera(
-  //         CameraUpdate.newCameraPosition(
-  //           CameraPosition(
-  //             target: LatLng(selectedLocation!.coordinates.latitude, selectedLocation!.coordinates.longitude),
-  //             zoom: 17,
-  //           ),
-  //         ),
-  //       );
-  //     });
-  //   } else {
-  //     setState(() {
-  //       indexOfLocation = 0;
-  //       selectedLocation = locations[indexOfLocation];
-  //       mapController.animateCamera(
-  //         CameraUpdate.newCameraPosition(
-  //           CameraPosition(
-  //             target: LatLng(selectedLocation!.coordinates.latitude, selectedLocation!.coordinates.longitude),
-  //             zoom: 17,
-  //           ),
-  //         ),
-  //       );
-  //     });
-  //   }
-  // }
-
-  // _onMapCreated(GoogleMapController controller) {
-  //   mapController = controller;
-  //   mapController.animateCamera(
-  //     CameraUpdate.newCameraPosition(
-  //       CameraPosition(
-  //         target: LatLng(selectedLocation!.coordinates.latitude, selectedLocation!.coordinates.longitude),
-  //         zoom: 17,
-  //       ),
-  //     ),
-  //   );
-  // }
 
   @override
   void initState() {
-    init2();
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      init();
+    });
     super.initState();
   }
 
@@ -151,7 +31,7 @@ class _GoogleMapScreenState extends State<GoogleMapScreen> {
     super.dispose();
   }
 
-  init2() async {
+  init() async {
     //call google view model
     final GoogleMapsViewModel mapsViewModel = Provider.of<GoogleMapsViewModel>(context, listen: false);
     await mapsViewModel.initialise(context: context);
@@ -211,7 +91,7 @@ class _GoogleMapScreenState extends State<GoogleMapScreen> {
                     zoom: 12.0,
                   ),
                   myLocationButtonEnabled: true,
-                  markers: _favoritedLocationsMarkers,
+                  markers: googleMapsViewModel.markers,
                   myLocationEnabled: true,
                 ),
                 Positioned(
